@@ -1,0 +1,83 @@
+//这是问卷发起人的数据形式
+{
+	"xizhihui": {
+		"title1": {
+			"time": "sss",
+			"content": "sjsldjdfl",
+		},
+		"title2": {
+			"time": "sss",
+			"content": "sjsldjdfl",
+		},
+		"title3": {
+			"time": "2016-08-07 16:39:23",
+			"content": {
+				"question1": {
+					"type": "Schoice",
+					"A": "you can go",
+					"B": "you can so",
+					"C": "you also go",
+					"D": "you na",
+				},
+				"question2": {
+					"type": "Mchoice",
+					"A": "you can go",
+					"B": "you can so",
+					"C": "you also go",
+					"D": "you na"
+				},
+				"question3": {
+					"type": "Schoice",
+					"A": "you can go",
+					"B": "you can so",
+					"C": "you also go",
+					"D": "you na"
+				},
+			},
+		},
+	},
+	"zhanglong":{
+
+	},
+}
+
+//这是问卷结果的数据形式
+{
+	"query1": {
+		"totalScore": {
+			"question1": {
+				"A": 1,
+				"B": 1,
+				"C": 2,
+				},
+			"question2": 3,
+			"question3": 1,
+		},
+		"name1": {
+			"question1": "A",
+			"question2": "b",
+			"question3": "c",
+			"question4": ["a", "b", "c"],
+		},
+		"name2": {
+			"question1": "A",
+			"question2": "b",
+			"question3": "c",
+			"question4": ["a", "b", "c"],
+		},
+		"name3": {
+			"question1": "A",
+			"question2": "b",
+			"question3": "c",
+			"question4": ["a", "b", "c"],
+		},
+	},
+	"query2": {
+
+	},
+}
+//这是问卷填写人的数据形式
+{
+	"name1": ["query1", "query2"],
+	"name2": ["query2", "query6"],
+}

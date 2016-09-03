@@ -1,0 +1,49 @@
+extends layout.jade
+
+
+
+block aimcss
+	link(rel='stylesheet' href='/stylesheets/newSurvey.css')
+
+block acontent
+	main
+		div.title
+			input.input_none(placeholder='请输入问卷标题' value= content['title'] disabled=true)
+
+		div.addQuestion
+			- for(var Q in content)
+				- if(Q != 'title' && Q != 'user' && Q != 'state' && Q != 'deadline')
+					div.questions
+						span= Q
+						input(class='question_body input_none' type='text' value= content[Q]['body'])
+						ul
+							- for(var i = 0, l = content[Q].choices.length; i < l; i++)
+								li
+									input(type= content[Q]['type'])
+									input(type='text' class='question_choice input_none' placeholder='选项，点击修改' value= content[Q]['choices'][i])
+
+							li
+								input(class='question_add input_none' value='+添加选项' type='button')
+								input(class='question_add input_none' value='-删除选项' type='button')
+
+							ul.reuse
+								li 上移
+								li 下移
+								li 复用
+								li 删除
+
+			div.addLogo
+				ul.addChoice
+					li 单选
+					li 多选
+					li 文本
+				span +添加问题
+
+
+		div.deadLine 问卷截止日期:
+			input(type='date' name='deadLine' id='deadline' value= content.deadline)
+			input(name='save' id='save' type='button' value='保存问卷')
+			input(name='publish' id='publish' type='button' value='发布问卷')
+
+block indexjs
+	script(src='/javascripts/newSurvey.js')

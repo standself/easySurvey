@@ -1,0 +1,13 @@
+extends layout.jade
+
+block aimcss
+	link(rel='stylesheet' href='/stylesheets/newSurvey.css')
+
+block acontent
+	main.main
+		div.new.btn.btn-large
+			span.glyphicon.glyphicon-question-sign(aria-hidden='true')
+			新建问卷
+
+block indexjs
+	script(type='text/javascript' src='/javascripts/newSurvey.js')

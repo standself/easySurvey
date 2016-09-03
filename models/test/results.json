@@ -1,0 +1,33 @@
+{
+	"title": "query1",
+	"totalScore": {
+		"Q1": {
+			"a": 1,
+			"b": 2,
+			"c": 3,
+			"d": 2
+		},
+		"Q2": {
+			"a": 2,
+		}
+	},
+	"name1": {
+			"time": "",
+			"Q1": "A",
+			"Q2": "b",
+			"Q3": "c",
+			"Q4": ["a", "b", "c"],
+	},
+	"name2": {
+			"question1": "A",
+			"question2": "b",
+			"question3": "c",
+			"question4": ["a", "b", "c"],
+	},
+	"name3": {
+			"question1": "A",
+			"question2": "b",
+			"question3": "c",
+			"question4": ["a", "b", "c"],
+	},
+}

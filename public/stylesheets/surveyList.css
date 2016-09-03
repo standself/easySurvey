@@ -1,0 +1,76 @@
+main{
+	width: 80%;
+	margin: 40px auto;
+	height: auto;
+}
+
+section{
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+section table{
+	width: 100%;
+	border: none;
+	height: auto;
+	font-size: 20px;
+}
+	tbody{
+		background-color: white;
+	}
+	table tr{
+		height: 30px;
+		line-height: 30px;
+	}
+	tbody tr:hover{
+		background-color: orange;
+		color: white;
+	}
+	table td{
+		padding-left: 10px;
+	}
+
+	thead .title{
+		width: 45%;
+	}
+	.list-radio{
+		width: 10%;
+	}
+	.list-title{
+		margin-left: 10px;
+		width: 50%;
+	}
+		thead .time, .list-time{
+			font-size: 18px;
+			width: 20%;
+		}
+		thead .state, .list-state{
+			width: 10%;
+			font-size: 18px;
+		}
+		.operate{
+			width: 35%;
+		}
+			.operate input{
+				width: 25%;
+				margin: 4%;
+			}
+	table tr:last-child{
+		font-size: 15px;
+	}
+		table tr:last-child a{
+			text-decoration: none;
+			margin-left:40px; 
+			color: black;
+		}
+		table tr:last-child a:hover{
+			color: blue;
+		}
+
+
+.publishing{
+	color: green;
+}
+.published{
+	color: red;
+}

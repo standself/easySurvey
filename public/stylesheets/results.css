@@ -1,0 +1,47 @@
+main{
+	width: 80%;
+	height: auto;
+	margin: 40px auto;
+}
+.questions{
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1px solid gray;
+	float: left;
+}
+.questions:before{
+	content: '';
+	clear: both;
+}
+.questions:after{
+	content: '';
+	clear: both;
+}
+	.questions .questionleft{
+		width: 60%;
+		float: left;
+		height: auto;
+		min-height: 100px;
+	}
+		.questionleft table{
+			margin-top: 10px;
+		}
+
+	.questions .questionRight{
+		width: 40%;
+		height: auto;
+		min-height: 100px;
+		min-width: 200px;
+		float: left;
+		box-sizing: border-box;
+	}
+	/*用于数据可视化*/
+	.questionRight div{
+		font: 10px sans-serif;
+		background-color: steelblue;
+		text-align: right;
+		padding: 3px;
+		margin: 1px;
+		color: white;
+	}

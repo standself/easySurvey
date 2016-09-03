@@ -1,0 +1,68 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #7e8aa2;
+}
+input:focus{
+	outline: none;
+}
+
+main{
+	width: 80%;
+	margin: 40px auto;
+	height: auto;
+}
+main section{
+	padding: 40px;
+	overflow: hidden;
+	width: 480px;
+	margin: auto;
+	background-color: white;
+	border-radius: 20px;
+}
+	form{
+		height: auto;
+		line-height: 40px;
+		width: 400px;
+		margin: auto;
+	}
+		form #username, #password, #passwordAgain, form #phone, form #mail{
+			width: 250px;
+			height: 30px;
+			margin-left: 20px;
+			margin-top: 20px;
+			font-size: 25px;
+			border-radius: 10px;
+		}
+		form div{
+			width: 300px;
+			margin: 20px auto 0 auto;
+			text-align: center;
+		}
+		form #login, form #register{
+			width: 100px;
+			height: 30px;
+			font-size: 15px;
+			border-radius: 10px;
+			background-color: #7e8aa2;
+			color: white;
+		}
+		form #login{
+			margin-right: 50px;
+		}
+
+		form #register_login{
+			width: 150px;
+			height: 30px;
+			font-size: 20px;
+			border-radius: 10px;
+			text-align: center;
+			background-color: #7e8aa2;
+			color: white;
+		}
+		form input + span{
+			font-size: 10px;
+			color: #7e8aa2;
+		}

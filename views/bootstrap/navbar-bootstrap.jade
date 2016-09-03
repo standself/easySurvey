@@ -1,0 +1,20 @@
+nav.navbar.navbar-inverse.navbar-fixed-top
+	div.container
+		div.navbar-header
+			a.navbar-brand(href='/index')
+				img(src='')
+			a.navbar-toggle.collapsed(data-toggle='collapse' data-target='#NavbarCollapse')
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+		div#NavbarCollapse.collapse.navbar-collapse
+			ul.nav.navbar-nav.navbar-left
+				li
+					a
+						span.glyphicon.glyphicon-question-sign(aria-hidden='true') 问卷管理
+				li
+					a(href='/cases') 我的问卷
+
+			ul.nav.navbar-nav.navbar-right
+				li
+					a= user.name

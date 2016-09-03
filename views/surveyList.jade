@@ -1,0 +1,58 @@
+extends layout.jade
+
+block aimcss
+	link(rel='stylesheet' href='/stylesheets/surveyList.css')
+
+block acontent
+	main
+		section
+			h1 我的所有问卷
+
+		section
+			table
+				thead
+					tr
+						th.title 标题
+						th.time 截止时间
+						th.state 状态
+						th.operate 操作
+
+				tbody
+					- if (surveyList)
+						- var states = {};
+						- states['published'] = '已结束'
+						- states['publishing'] = '发布中'
+						- states['unpublished'] = '未发布'
+						- for (var i = 0, l = surveyList.length; i < l; i++)
+							tr(class='list-tr')
+								td(col-span=2)
+									input(type='checkbox')
+									span(class='list-title')= surveyList[i].title
+								td
+									- console.log(surveyList[i]);
+									span(class='list-time')= surveyList[i].deadline
+								td
+									span(class= 'list-state '+surveyList[i].state )= states[surveyList[i].state]
+								td.operate
+									- var disableEdit = false, disableDetail = false
+									- if (surveyList[i].state == 'published')
+										- disableEdit = true;
+									- else if (surveyList[i].state == 'unpublished')
+										- disableDetail = true
+									input(type='button' class='list-edit' value='编辑' disabled= disableEdit)
+									input(type='button' class='list-del' value='删除' )
+									input(type='button' class='list-detail' value='查看结果' disabled= disableDetail)
+						tr
+							td(colspan=4)
+								input(type='checkbox' name='list-selectAll')
+								全选
+								input(type='button' value='删除' id='list-delAll')
+								a(href='/newSurvey') 点我点我，创建新问卷啊。
+					- else
+						tr
+							td(colspan=4)
+								a(href='/newSurvey') 你的问卷空空如也，点我创建吧。
+
+
+block indexjs
+	script(src='/javascripts/surveyList.js')

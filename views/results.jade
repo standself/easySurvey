@@ -1,0 +1,35 @@
+extends layout.jade
+block aimcss
+	script(src="https://d3js.org/d3.v3.min.js")
+	link(rel='stylesheet' href='/stylesheets/results.css')
+
+block acontent
+	main
+		div.row
+			div.col-md-2#back
+				span.glyphicon.glyphicon-chevron-left
+				返回
+
+			div.col-md-8
+				h2= title
+				h4 此统计分析只包含完整回收的数据
+		- var keys = Object.keys(queryData)
+		input(type='hidden' value= JSON.stringify(keys))
+		- for (var key in queryData)
+			div.questions
+				div.questionleft
+					h4.questionBody= key
+					table
+						tr
+							td 选项
+							td :
+							td 票数
+						- for( var item in queryData[key])
+							tr
+								td= item
+								td= ':'
+								td= queryData[key][item]
+				div(class='questionRight' id= key data-data= JSON.stringify(queryData[key]))
+
+block indexjs
+	script(src='/javascripts/d3valization.js')

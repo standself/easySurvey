@@ -1,0 +1,36 @@
+extends layout.jade
+
+block aimcss
+	link(rel='stylesheet' href='/stylesheets/index.css')
+
+block acontent
+	main
+		- if(!user)
+			section.login
+				a(href='/login')
+					input(type='button' value='login')
+				a(href='/register')
+					input(type='button' value='register')
+
+		section.search
+			span
+				b 问卷搜索：
+			input(type='text' placeholder='问卷发起人、问卷名')
+			input(type='button' value='search')
+
+			div
+				a(href='/newSurvey' title='新建问卷') 没有你想的问卷？自己创建一个吧。^_^
+
+		h3 发布中的问卷：
+		section
+			ul.publishing
+				- var i = 0
+				- if (list.length == 0)
+					li 暂时还没有发布中的问卷呐。
+				- for(; i < list.length; i++ )
+					li
+						a(href= '/vote/'+list[i].title+'&'+list[i].author)= list[i].title + '     ' + list[i].deadline +  '     ' + list[i].author 
+
+block indexjs
+	script(src='/javascripts/index.js')
+	

@@ -1,0 +1,34 @@
+{
+	"name": "xizhihui",
+	"survey 1": {
+		"time": 22,
+		"Q 1": {
+			"type": "multi-choice",
+			"required": true,
+			"content": "questions",
+			"answer": "A",
+			"A": "sdafadf",
+			"B": "ssdjfa;",
+			"C": "jlj;kj;lkj",
+			"D": "sdjakfj;afj"
+		},
+		"Q 2": {
+			"type": "multi-choice",
+			"A": "sdafadf",
+			"B": "ssdjfa;",
+		}
+	},
+	"survey 2": {
+		"time": 22,
+		"Q 1": {
+				"type": "multi-choice",
+				"A": "sdafadf",
+				"B": "ssdjfa;",
+		},
+		"Q 2": {
+				"type": "multi-choice",
+				"A": "sdafadf",
+				"B": "ssdjfa;",
+		}
+	},
+}

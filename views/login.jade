@@ -1,0 +1,27 @@
+extends layout.jade
+
+block aimcss
+	link(rel='stylesheet' href='/stylesheets/login.css')
+
+block acontent
+	main
+		section
+			form(method='post' action='/login')
+				- if (error)
+					h2.error= error
+				label(for='username') username:
+				input#username(type='username' name='username' placeholder='请输入用户名')
+				br
+				label(for='password') password:
+				input(type='password' name='password' id='password' placeholder='请输入密码')
+				br
+				input(type='checkbox')
+				span 记住我
+				br
+				div
+					input(type='submit' id='login' value='login')
+					a(href='/register')
+						input(type='button' id='register' value='register')
+
+block indexjs
+	script(src='/javascripts/login.js')

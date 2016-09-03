@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel='stylesheet' href='../public/stylesheets/login.css' />
+</head>
+<body>
+	<main>
+		<section>
+			<form method="post" action="/login">
+				<label for='username'>username:</label>
+				<input type='username' name='username' id='username' placeholder='请输入用户名' /><br />
+				<label for='password'>password:</label>
+				<input type='password' name='password' id='password' placeholder='请输入密码' /><br />
+				<input type='checkbox' /><span>记住我</span><br />
+				<div>
+					<input type='submit' id='login' value='login'/>
+					<a href='/register'><input type='button' id='register' value='register'/></a>
+				</div>
+			</form>
+		</section>
+	</main>
+	
+</body>
+</html>

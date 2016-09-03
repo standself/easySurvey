@@ -1,0 +1,61 @@
+
+/*布局类*/
+.lay-fl {
+	float: left;
+}
+.lay-fr {
+	float: right;
+}
+.lay-pr {
+	position: relative;
+}
+.lay-pa {
+	position: absolute; 
+}
+.lay-pr-lt50 {
+	position: relative;
+	left: 50px;
+	top: 50px;
+}
+.lay-pa-lt50 {
+	position: relative;
+	left: 50px;
+	top: 50px;
+}
+.lay-cb::after{
+	content: '';
+	clear: both;
+}
+.lay-cb {
+	clear: both;
+}
+
+/*大小、高度、长度*/
+.len-w800 {
+	width: 800px;
+}
+.len-w200 {
+	width: 200px;
+}
+.len-w400 {
+	width: 400px;
+}
+.len-w100 {
+	width: 100px;
+}
+.len-m10 {
+	margin: 10px;
+}
+.len-mlra {
+	margin-left: auto;
+	margin-right: auto;
+}
+.len-p10 {
+	margin: 10px;
+}
+.len-fz14 {
+	font-size: 14px;
+}
+.len-lh14 {
+	line-height: 14px;
+}

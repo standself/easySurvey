@@ -1,0 +1,14 @@
+nav
+	div.navbar
+		img(src='/images/豆瓣音乐人.jpg' alt='logo')
+		ul.navbar-ul
+			li.navbar-content
+				a(href='/') 问卷大厅
+			- if (user)
+				li.navbar-content
+					a(href='/surveyList') 我的问卷
+				li.navbar-sign
+					a(href='/logout' title='退出登录')= user.name
+			- else
+				li.navbar-sign
+					a(href='/login') sign in
